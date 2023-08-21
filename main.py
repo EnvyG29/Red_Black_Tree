@@ -1,4 +1,4 @@
-from Right_Red_Black_Tree import RBTree
+from Red_Black_Tree import RBTree
 
 
 def go():
