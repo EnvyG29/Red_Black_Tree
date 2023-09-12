@@ -44,5 +44,32 @@ def go():
     tree_digit.print_tree()
 
 
+def go2():
+    tree_digit = RBTree()
+    print("Red_Black_Tree\n"
+          "45 - введите число что добавить его в дерево\n"
+          "stop - закончить программу\n"
+          "list - выведет дерево в виде списка\n"
+          "del 66 - удалит число из дерева")
+    while True:
+        print()
+        a = input(">>> ")
+        if a == "stop":
+            return
+        if a == "list":
+            print(tree_digit.to_list())
+        elif a[0:4] == "del " and a[4:].isdigit():
+            tree_digit.delete(int(a[4:]))
+            print()
+            tree_digit.print_tree()
+        elif a.isdigit():
+            tree_digit.insert(int(a))
+            print()
+            tree_digit.print_tree()
+        else:
+            print("Невалидная команда или число")
+
+
 if __name__ == '__main__':
-    go()
+    # go()
+    go2()
